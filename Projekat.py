@@ -13,7 +13,7 @@ def dodaj_iks_ili_oks(self,x_kordinata,y_kordinata):
 
 
 def proveri_pobedu:
-	if niz=[[x,o,x]]:
-			[o,x,x]
-			[x,o,x]
-		
+	if (x_kordinata,y_kordinata)=[[(0,0),(0,1),(0,2)],[(1,0),(1,1),(1,2)],[(2,0),(2,1),(2,2)],[(0,0),(0,1),(0,2)],[(1,0),(1,1),(1,2)],[(2,0),(2,1),(2,2)],[(0,0),(1,1),(2,2)],[(0,2),(2,1),(2,2)]:
+		print "Pobeda"
+	else:
+		print"Izgubio si"
