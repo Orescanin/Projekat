@@ -25,5 +25,5 @@ def proveri_pobedu:
 
 		]
 
-	if niz([0],[0])
+	if niz[0][0] == 'x' and niz[0][1] == 'x' and niz[0][2] == 'x' or niz[0][0] == 'o' and niz[0][1] == 'o' and niz[0][2] =='o' or niz[0][0] == 'o' and niz[0][1] == 'o' and niz[0][2] =='o' 
 		
