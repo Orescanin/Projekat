@@ -88,7 +88,7 @@ def proveri_pobedu:
 			print "prvi igrac pobedio!"
 
 		else 
-print "drugi igrac pobedio!" 
+			print "drugi igrac pobedio!" 
 
 
 
