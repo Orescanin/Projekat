@@ -73,3 +73,19 @@ def proveri_pobedu:
 
 		else 
 			print "drugi igrac pobedio!" 
+
+
+	elif niz[0][0] == niz[1][1] == niz[2][2]:
+		if niz[0][0]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
+
+
+	elif niz[0][2] == niz[1][1] == niz[2][0]:
+		if niz[0][2]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
