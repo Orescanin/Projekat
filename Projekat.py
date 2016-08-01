@@ -25,5 +25,51 @@ def proveri_pobedu:
 
 		]
 
-	if niz[0][0] == 'x' and niz[0][1] == 'x' and niz[0][2] == 'x' or niz[0][0] == 'o' and niz[0][1] == 'o' and niz[0][2] =='o' or niz[0][0] == 'o' and niz[0][1] == 'o' and niz[0][2] =='o' 
+	if niz[0][0] == niz[0][1] == niz[0][2]:
+		if niz[0][0]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
+
+
+	elif niz[1][0] == niz[1][1] == niz[1][2]:
+		if niz[1][0]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
+
+
+
+	elif niz[2][0] == niz[2][1] == niz[2][2]:
+		if niz[2][0]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
+
+
+	elif niz[0][0] == niz[1][0] == niz[2][0]:
+		if niz[0][0]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
+
+
+	elif niz[0][1] == niz[1][1] == niz[2][1]:
+		if niz[0][1]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
 		
+
+
+	elif niz[0][2] == niz[1][2] == niz[2][2]:
+		if niz[0][2]=='x'
+			print "prvi igrac pobedio!"
+
+		else 
+			print "drugi igrac pobedio!" 
