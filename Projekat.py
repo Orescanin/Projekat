@@ -14,17 +14,29 @@ o = 'o'
 
 
 def proveri_koordinate():
-	if x_kordinata in [0,1,2] and y_kordinata in [0,1,2]:
-		print ("Sledeci igrac")
-	else:
-		print ("Greska. Pokusaj ponovo")
+	global x_kordinata
+	global y_kordinata
 
+	if x_kordinata in [0,1,2] and y_kordinata in [0,1,2]:
+
+		if niz[x_kordinata][y_kordinata]==None:
+			print ("Sledeci igrac")
+			return True
+		else:
+			print ("Na tom mestu vec ima x ili ox. Pokusaj ponovo.")
+			return False
+	else:
+		print("Greska. Pokusaj ponovo")
+		return False
 
 	 	
 	 	
 	 	
 def proveri_pobedu():
 	global xo
+	global finished
+	global x_kordinata
+	global y_kordinata
 	
 
 	if niz[0][0] == niz[0][1] == niz[0][2] != None:
@@ -134,28 +146,31 @@ def proveri_pobedu():
 		a = input()
 		x_kordinata = int(a[0])
 		y_kordinata = int(a[1])
-		niz[x_kordinata][y_kordinata] = x
+		if proveri_koordinate() == True:
+			niz[x_kordinata][y_kordinata] = x
+			xo = 'o'
 		for i in range(0,3):
 			print (niz[i])
-		xo = 'o'
+		
 
 	elif xo == 'o':
 		print ("Sada je red na drugog igraca. Upisi koordinate za o(_,_).")	
 		a = input()
 		x_kordinata = int(a[0])
 		y_kordinata = int(a[1])
-		niz[x_kordinata][y_kordinata] = o
+		if proveri_koordinate() == True:
+			niz[x_kordinata][y_kordinata] = o
+			xo = 'x'
 		for i in range(0,3):
 			print (niz[i])
 		
-		xo = 'x'
 
 	
 xo = 'x'	
 finished=False
 while finished == False:
-	proveri_koordinate()
 	proveri_pobedu()
+	
 
 
 
