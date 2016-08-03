@@ -8,6 +8,14 @@ def main():
 main()
 
 
+
+def proveri_koordinate:
+	if x_kordinata and y_kordinata in range (0,2):
+		print "Sledeci igrac"
+	else:
+		print "Greska. Pokusaj ponovo"
+
+
 	 	
 	 	
 	 	
