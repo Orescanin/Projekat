@@ -124,8 +124,9 @@ def proveri_pobedu():
 			print (niz[i])
 
 while True:
+	proveri_koordinate()
 	proveri_pobedu()
-
+	
 
 
 
