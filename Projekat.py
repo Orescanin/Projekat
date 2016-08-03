@@ -1,9 +1,9 @@
 niz=[
-		[1, 2, 3],
+		[None, None, None],
 
-		[4, 5, 6],
+		[None, None, None],
 
-		[7, 8, 9]
+		[None, None, None]
 
 	]
 
@@ -27,7 +27,7 @@ def proveri_pobedu():
 	global xo
 	
 
-	if niz[0][0] == niz[0][1] == niz[0][2]:
+	if niz[0][0] == niz[0][1] == niz[0][2] != None:
 		if niz[0][0]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -38,7 +38,7 @@ def proveri_pobedu():
 		finished = True
 
 
-	elif niz[1][0] == niz[1][1] == niz[1][2]:
+	elif niz[1][0] == niz[1][1] == niz[1][2] != None:
 		if niz[1][0]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -52,7 +52,7 @@ def proveri_pobedu():
 
 
 
-	elif niz[2][0] == niz[2][1] == niz[2][2]:
+	elif niz[2][0] == niz[2][1] == niz[2][2] != None:
 		if niz[2][0]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -65,7 +65,7 @@ def proveri_pobedu():
 		finished = True
 
 
-	elif niz[0][0] == niz[1][0] == niz[2][0]:
+	elif niz[0][0] == niz[1][0] == niz[2][0] != None:
 		if niz[0][0]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -77,7 +77,7 @@ def proveri_pobedu():
 
 		finished = True
 
-	elif niz[0][1] == niz[1][1] == niz[2][1]:
+	elif niz[0][1] == niz[1][1] == niz[2][1] != None:
 		if niz[0][1]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -92,7 +92,7 @@ def proveri_pobedu():
 		
 
 
-	elif niz[0][2] == niz[1][2] == niz[2][2]:
+	elif niz[0][2] == niz[1][2] == niz[2][2] != None:
 		if niz[0][2]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -103,7 +103,7 @@ def proveri_pobedu():
 
 		finished = True
 
-	elif niz[0][0] == niz[1][1] == niz[2][2]:
+	elif niz[0][0] == niz[1][1] == niz[2][2] != None:
 		if niz[0][0]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -116,7 +116,7 @@ def proveri_pobedu():
 		finished = True
 
 
-	elif niz[0][2] == niz[1][1] == niz[2][0]:
+	elif niz[0][2] == niz[1][1] == niz[2][0] != None:
 		if niz[0][2]=='x':
 
 			print ("prvi igrac pobedio!")
@@ -130,18 +130,21 @@ def proveri_pobedu():
 
 	elif xo == 'x': 
 
-		print ("Prvi igrac je na potezu. Upisi koordinate za X(_,_)")
-
-		x_kordinata, y_kordinata = map(int, input().split(' '))
-		niz[x_kordinata][y_kordinata].append(x)
+		print ("Prvi igrac je na potezu. Upisi koordinate za x(_,_)")
+		a = input()
+		x_kordinata = int(a[0])
+		y_kordinata = int(a[1])
+		niz[x_kordinata][y_kordinata] = x
 		for i in range(0,3):
 			print (niz[i])
 		xo = 'o'
 
 	elif xo == 'o':
-		print ("Sada je red na drugog igraca. Upisi koordinate za О(_,_).")	
-		x_kordinata, y_kordinata = map(int, input().split(' '))
-		niz[x_kordinata][y_kordinata].append(o)
+		print ("Sada je red na drugog igraca. Upisi koordinate za o(_,_).")	
+		a = input()
+		x_kordinata = int(a[0])
+		y_kordinata = int(a[1])
+		niz[x_kordinata][y_kordinata] = o
 		for i in range(0,3):
 			print (niz[i])
 		
